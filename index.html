@@ -1,0 +1,60 @@
+<head> 
+    <link rel="stylesheet" href="styles.css">
+    <script>
+      function myCounter() {
+        var xhttp = new XMLHttpRequest(); 
+        xhttp.open("GET","https://l3z52gpk9f.execute-api.eu-west-2.amazonaws.com/default/getVisitorLambda");
+        xhttp.onload = function() {
+          document.getElementById("my-counter").innerHTML = this.responseText;
+        };
+        xhttp.send();
+      }
+    </script>
+</head>
+
+<body onload="myCounter()">
+    <div id="header"></div>
+    <div class="left"></div>
+    <div class="stuff">
+    <br><br>
+    <h1>Curriculum vitae</h1>
+    <h2>David</h2>
+    <hr />
+    <br>
+    <p class="head">Interests</p>
+    <ul>
+        <li>Information Security</li>
+        <li>Programming & Development</li>
+        <li>Intelligence</li>
+        <li>Technology</li>
+        <li>Politics</li>
+    </ul>
+    <p class="head">Skills</p>
+    <ul>
+        <li>Tinkering</li>
+    </ul>
+    <p class="head">Education</p>
+    <ul>
+        <li><a href="https://www.lboro.ac.uk/">Loughborough University</a></li>
+        <li>Codeacademy</li>
+    </ul>
+    <p class="head">Experience</p>
+    <ul>
+        <li>A bit of consultancy</li>
+        <li>A bit of time in the military</li>
+    </ul>
+    <p class="head">Extracurriculars</p>
+    <ul>
+        <li>Hacking</li>
+        <li>Reading</li>
+    </ul>
+    </div>
+    <div class="right"></div>
+    <div id="footer">
+    <h2 id="name">David</h2>
+
+
+    <h2>Visitor Number: <span id="my-counter"></span></h2>
+
+    </div>
+</body>
