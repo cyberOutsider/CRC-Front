@@ -3,7 +3,7 @@
     <script>
       function myCounter() {
         var xhttp = new XMLHttpRequest(); 
-        xhttp.open("GET","https://l3z52gpk9f.execute-api.eu-west-2.amazonaws.com/default/getVisitorLambda");
+        xhttp.open("GET","https://pe8tqbn6v9.execute-api.eu-west-2.amazonaws.com/Prod/getVisitorCount");
         xhttp.onload = function() {
           document.getElementById("my-counter").innerHTML = this.responseText;
         };
